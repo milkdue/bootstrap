@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>谷粒学院</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .gd-30 {
+            height: 20px;
+        }
+
+        .gd-50 {
+            height: 50px;
+        }
+        .bottom{
+            color:white;
+            background-color: #333;
+            padding: 30px;
+        }
+        .bottom dt{
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .foot{
+            color:white;
+            background-color: #000;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 导航条 start -->
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">首页 <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">谷粒学院</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false">前端 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">HTML</a></li>
+                            <li><a href="#">CSS</a></li>
+                            <li><a href="#">JavaScript</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false">后端 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">My SQL</a></li>
+                            <li><a href="#">Node.js</a></li>
+                            <li><a href="#">Java</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="关键字">
+                    </div>
+                    <button type="submit" class="btn btn-default">搜索</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">站内信 <span class="badge">20</span></a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false">个人中心 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">个人信息</a></li>
+                            <li><a href="#">历史记录</a></li>
+                            <li><a href="#">我的收藏</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">退出登录</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <!-- 导航条 end -->
+
+    <div class="container">
+        <!-- 提示信息   start -->
+        <div class="alert alert-success" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span
+                    aria-hidden="true">&times;</span></button>
+            <strong>恭喜!</strong> 注册成功！
+        </div>
+        <!-- 提示信息   end -->
+        <!-- 巨幕   start -->
+        <div class="jumbotron">
+            <h2>视频更新了！</h1>
+                <p class="h3">书山有路勤为径, 学海无涯苦作舟...</p>
+                <p><a class="btn btn-primary btn-md" href="#" role="button">立即观看</a></p>
+        </div>
+        <!-- 巨幕   end -->
+        <!-- 路径导航   start -->
+        <ol class="breadcrumb">
+            <li><a href="#">首页</a></li>
+            <li class="active">热门视频</li>
+        </ol>
+        <!-- 路径导航    end -->
+        <!-- 图片列表   start -->
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="thumbnail">
+                    <img src="../img/htmlcss.jpg" alt="...">
+                    <div class="caption">
+                        <h3>html CSS 入门视频</h3>
+                        <p>web编程入门首选</p>
+                        <p>
+                            <span class="label label-info">免费</span>
+                            <span class="label label-success">入门</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="thumbnail">
+                    <img src="../img/htmlcss.jpg" alt="...">
+                    <div class="caption">
+                        <h3>html CSS 入门视频</h3>
+                        <p>web编程入门首选</p>
+                        <p>
+                            <span class="label label-info">免费</span>
+                            <span class="label label-success">入门</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="thumbnail">
+                    <img src="../img/htmlcss.jpg" alt="...">
+                    <div class="caption">
+                        <h3>html CSS 入门视频</h3>
+                        <p>web编程入门首选</p>
+                        <p>
+                            <span class="label label-info">免费</span>
+                            <span class="label label-success">入门</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="thumbnail">
+                    <img src="../img/htmlcss.jpg" alt="...">
+                    <div class="caption">
+                        <h3>html CSS 入门视频</h3>
+                        <p>web编程入门首选</p>
+                        <p>
+                            <span class="label label-info">免费</span>
+                            <span class="label label-success">入门</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="thumbnail">
+                    <img src="../img/es6.jpg" alt="...">
+                    <div class="caption">
+                        <h3>html CSS 入门视频</h3>
+                        <p>web编程入门首选</p>
+                        <p>
+                            <span class="label label-info">免费</span>
+                            <span class="label label-success">入门</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="thumbnail">
+                    <img src="../img/es6.jpg" alt="...">
+                    <div class="caption">
+                        <h3>html CSS 入门视频</h3>
+                        <p>web编程入门首选</p>
+                        <p>
+                            <span class="label label-info">免费</span>
+                            <span class="label label-success">入门</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="thumbnail">
+                    <img src="../img/es6.jpg" alt="...">
+                    <div class="caption">
+                        <h3>html CSS 入门视频</h3>
+                        <p>web编程入门首选</p>
+                        <p>
+                            <span class="label label-info">免费</span>
+                            <span class="label label-success">入门</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="thumbnail">
+                    <img src="../img/es6.jpg" alt="...">
+                    <div class="caption">
+                        <h3>html CSS 入门视频</h3>
+                        <p>web编程入门首选</p>
+                        <p>
+                            <span class="label label-info">免费</span>
+                            <span class="label label-success">入门</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="thumbnail">
+                    <img src="../img/jquery.jpg" alt="...">
+                    <div class="caption">
+                        <h3>html CSS 入门视频</h3>
+                        <p>web编程入门首选</p>
+                        <p>
+                            <span class="label label-info">免费</span>
+                            <span class="label label-success">入门</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="thumbnail">
+                    <img src="../img/jquery.jpg" alt="...">
+                    <div class="caption">
+                        <h3>html CSS 入门视频</h3>
+                        <p>web编程入门首选</p>
+                        <p>
+                            <span class="label label-info">免费</span>
+                            <span class="label label-success">入门</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="thumbnail">
+                    <img src="../img/jquery.jpg" alt="...">
+                    <div class="caption">
+                        <h3>html CSS 入门视频</h3>
+                        <p>web编程入门首选</p>
+                        <p>
+                            <span class="label label-info">免费</span>
+                            <span class="label label-success">入门</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="thumbnail">
+                    <img src="../img/jquery.jpg" alt="...">
+                    <div class="caption">
+                        <h3>html CSS 入门视频</h3>
+                        <p>web编程入门首选</p>
+                        <p>
+                            <span class="label label-info">免费</span>
+                            <span class="label label-success">入门</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="thumbnail">
+                    <img src="../img/js.jpg" alt="...">
+                    <div class="caption">
+                        <h3>html CSS 入门视频</h3>
+                        <p>web编程入门首选</p>
+                        <p>
+                            <span class="label label-info">免费</span>
+                            <span class="label label-success">入门</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="thumbnail">
+                    <img src="../img/js.jpg" alt="...">
+                    <div class="caption">
+                        <h3>html CSS 入门视频</h3>
+                        <p>web编程入门首选</p>
+                        <p>
+                            <span class="label label-info">免费</span>
+                            <span class="label label-success">入门</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="thumbnail">
+                    <img src="../img/js.jpg" alt="...">
+                    <div class="caption">
+                        <h3>html CSS 入门视频</h3>
+                        <p>web编程入门首选</p>
+                        <p>
+                            <span class="label label-info">免费</span>
+                            <span class="label label-success">入门</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="thumbnail">
+                    <img src="../img/js.jpg" alt="...">
+                    <div class="caption">
+                        <h3>html CSS 入门视频</h3>
+                        <p>web编程入门首选</p>
+                        <p>
+                            <span class="label label-info">免费</span>
+                            <span class="label label-success">入门</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="thumbnail">
+                    <img src="../img/mongodb.jpg" alt="...">
+                    <div class="caption">
+                        <h3>html CSS 入门视频</h3>
+                        <p>web编程入门首选</p>
+                        <p>
+                            <span class="label label-info">免费</span>
+                            <span class="label label-success">入门</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="thumbnail">
+                    <img src="../img/mongodb.jpg" alt="...">
+                    <div class="caption">
+                        <h3>html CSS 入门视频</h3>
+                        <p>web编程入门首选</p>
+                        <p>
+                            <span class="label label-info">免费</span>
+                            <span class="label label-success">入门</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="thumbnail">
+                    <img src="../img/mongodb.jpg" alt="...">
+                    <div class="caption">
+                        <h3>html CSS 入门视频</h3>
+                        <p>web编程入门首选</p>
+                        <p>
+                            <span class="label label-info">免费</span>
+                            <span class="label label-success">入门</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="thumbnail">
+                    <img src="../img/mongodb.jpg" alt="...">
+                    <div class="caption">
+                        <h3>html CSS 入门视频</h3>
+                        <p>web编程入门首选</p>
+                        <p>
+                            <span class="label label-info">免费</span>
+                            <span class="label label-success">入门</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="thumbnail">
+                    <img src="../img/node.png" alt="...">
+                    <div class="caption">
+                        <h3>html CSS 入门视频</h3>
+                        <p>web编程入门首选</p>
+                        <p>
+                            <span class="label label-info">免费</span>
+                            <span class="label label-success">入门</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="thumbnail">
+                    <img src="../img/node.png" alt="...">
+                    <div class="caption">
+                        <h3>html CSS 入门视频</h3>
+                        <p>web编程入门首选</p>
+                        <p>
+                            <span class="label label-info">免费</span>
+                            <span class="label label-success">入门</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="thumbnail">
+                    <img src="../img/node.png" alt="...">
+                    <div class="caption">
+                        <h3>html CSS 入门视频</h3>
+                        <p>web编程入门首选</p>
+                        <p>
+                            <span class="label label-info">免费</span>
+                            <span class="label label-success">入门</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="thumbnail">
+                    <img src="../img/node.png" alt="...">
+                    <div class="caption">
+                        <h3>html CSS 入门视频</h3>
+                        <p>web编程入门首选</p>
+                        <p>
+                            <span class="label label-info">免费</span>
+                            <span class="label label-success">入门</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="thumbnail">
+                    <img src="../img/react.jpg" alt="...">
+                    <div class="caption">
+                        <h3>html CSS 入门视频</h3>
+                        <p>web编程入门首选</p>
+                        <p>
+                            <span class="label label-info">免费</span>
+                            <span class="label label-success">入门</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="thumbnail">
+                    <img src="../img/react.jpg" alt="...">
+                    <div class="caption">
+                        <h3>html CSS 入门视频</h3>
+                        <p>web编程入门首选</p>
+                        <p>
+                            <span class="label label-info">免费</span>
+                            <span class="label label-success">入门</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="thumbnail">
+                    <img src="../img/react.jpg" alt="...">
+                    <div class="caption">
+                        <h3>html CSS 入门视频</h3>
+                        <p>web编程入门首选</p>
+                        <p>
+                            <span class="label label-info">免费</span>
+                            <span class="label label-success">入门</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <div class="thumbnail">
+                    <img src="../img/react.jpg" alt="...">
+                    <div class="caption">
+                        <h3>html CSS 入门视频</h3>
+                        <p>web编程入门首选</p>
+                        <p>
+                            <span class="label label-info">免费</span>
+                            <span class="label label-success">入门</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 图片列表   end -->
+        <!-- 分页   start -->
+        <nav aria-label="Page navigation">
+            <ul class="pagination  pull-right">
+                <li class="disabled">
+                    <a href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="active"><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li>
+                    <a href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- 分页   end -->
+        <div class="gd-30"></div>
+        <!-- 合作企业   start -->
+        <h2 class="page-header">合作企业</h2>
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <img src="https://tcs.teambition.net/thumbnail/011cb4b49c09d5c7f73e95042cfe71889692/w/300/h/200" alt="" class="img-responsive">
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <img src="https://tcs.teambition.net/thumbnail/011cb4b49c09d5c7f73e95042cfe71889692/w/300/h/200" alt="" class="img-responsive">
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <img src="https://tcs.teambition.net/thumbnail/011cb4b49c09d5c7f73e95042cfe71889692/w/300/h/200" alt="" class="img-responsive">
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <img src="https://tcs.teambition.net/thumbnail/011cb4b49c09d5c7f73e95042cfe71889692/w/300/h/200" alt="" class="img-responsive">
+            </div>
+        </div>
+        <!-- 合作企业   end -->
+    </div>
+    <div class="gd-50"></div>
+    <!-- 底部   start -->
+    <div class="container-fluid">
+        <div class="bottom text-center row">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <dl>
+                    <dt>新手入门</dt>
+                    <dd>用户注册</dd>
+                    <dd>用户注册</dd>
+                    <dd>用户注册</dd>
+                </dl>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <dl>
+                    <dt>新手入门</dt>
+                    <dd>用户注册</dd>
+                    <dd>用户注册</dd>
+                    <dd>用户注册</dd>
+                </dl>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <dl>
+                    <dt>新手入门</dt>
+                    <dd>用户注册</dd>
+                    <dd>用户注册</dd>
+                    <dd>用户注册</dd>
+                </dl>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <dl>
+                    <dt>新手入门</dt>
+                    <dd>用户注册</dd>
+                    <dd>用户注册</dd>
+                    <dd>用户注册</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div class="foot text-center">
+        ©2018课程版权均归谷粒学院所有 京ICP备17055252号
+    </div>
+    <!-- 底部   end -->
+
+    <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+    <!-- 标题闪烁效果 -->
+    <script>
+        console.log(document.title);
+        let title1 = '[　　　]谷粒学院';
+        let title2 = '[新提醒]谷粒学院';
+        let i = 0;
+        setInterval(() => {
+            if(i % 2 == 0){
+                document.title = title1;
+            }else{
+                document.title = title2;
+            }
+            i++;
+        }, 500);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      兼容h5新标签
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+      媒体查询兼容
+    <![endif]-->
+    <style>
+        .box1 {
+            background-color: aqua;
+        }
+
+        .box2 {
+            background-color: red;
+        }
+
+        .box3 {
+            background-color: yellow;
+        }
+
+        .box4 {
+            background-color: tomato;
+        }
+
+        .box5 {
+            background-color: thistle;
+        }
+
+        .box6 {
+            background-color: violet
+        }
+
+        .box7 {
+            background-color: wheat;
+        }
+
+        .box8 {
+            background-color: yellowgreen;
+        }
+
+        .box9 {
+            background-color: turquoise;
+        }
+
+        .box10 {
+            background-color: blue;
+        }
+
+        .box11 {
+            background-color: blueviolet;
+        }
+
+        .box12 {
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 布局容器 -->
+    <!-- container 固定宽度 支持响应式布局-->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-4 box1">
+                1
+                <br>
+                2
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-4 box2 visible-lg-block">1</div>
+            <!-- 添加清除浮动造成的影响 在大屏上display: block 其他none 也可以将visible-lg-block单独使用 在大屏该元素显示-->
+            <div class="clearfix visible-lg-block"></div>
+            <div class="col-lg-3 col-md-6 col-sm-4 box3">1</div>
+        </div>
+    </div>
+    <!-- container-fluid 占满全屏-->
+    <br>
+    <br>
+    <div class="container-fluid">
+        <div class="col-lg-1 col-md-3 col-sm-4 col-xs-6 box1">1</div>
+        <div class="col-lg-1 col-md-3 col-sm-4 col-xs-6 box2">1</div>
+        <div class="col-lg-1 col-md-3 col-sm-4 col-xs-6 box3">1</div>
+        <div class="col-lg-1 col-md-3 col-sm-4 col-xs-6 box4">1</div>
+        <div class="col-lg-1 col-md-3 col-sm-4 col-xs-6 box5">1</div>
+        <div class="col-lg-1 col-md-3 col-sm-4 col-xs-6 box6">1</div>
+        <div class="col-lg-1 col-md-3 col-sm-4 col-xs-6 box7">1</div>
+        <div class="col-lg-1 col-md-3 col-sm-4 col-xs-6 box8">1</div>
+        <div class="col-lg-1 col-md-3 col-sm-4 col-xs-6 box9">1</div>
+        <div class="col-lg-1 col-md-3 col-sm-4 col-xs-6 box10">1</div>
+        <div class="col-lg-1 col-md-3 col-sm-4 col-xs-6 box11">1</div>
+        <div class="col-lg-1 col-md-3 col-sm-4 col-xs-6 box12">1</div>
+    </div>;
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+    <script src="../js/bootstrap.js"></script>
+</body>
+
+</html>

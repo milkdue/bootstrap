@@ -1,0 +1,120 @@
+@import 'https://cdn.bootcdn.net/ajax/libs/normalize/8.0.1/normalize.min.css';
+*{
+    box-sizing: border-box;
+}
+// 清除浮动
+.clear-fix{
+    &:after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+}
+// 变量声明
+// 屏幕的阈值
+@screen-lg: 1200px;
+@screen-md: 992px;
+@screen-sm: 768px;
+// 容器的宽度
+@container-lg-width: 1170px;
+@container-md-width: 970px;
+@container-sm-width: 750px;
+// 列数
+@grid-gutter-count: 12;
+// 列宽
+@grid-gutter-width: 30px;
+// 容器的实现
+// container
+.contain(){
+    margin: 0 auto;
+    padding-left: @grid-gutter-width / 2;
+    padding-right: @grid-gutter-width / 2;
+}
+.container{
+    .clear-fix();
+    .contain();
+    @media (min-width: @container-sm-width){
+        width: @container-sm-width;
+    }
+    @media (min-width: @container-md-width){
+        width: @container-md-width;
+    }
+    @media (min-width: @container-lg-width){
+        width: @container-lg-width;
+    }
+}
+// container-fluid
+.container-fluid{
+    .clear-fix();
+    .contain();
+}
+// 行的实现
+.row{
+    margin-left: -@grid-gutter-width / 2;
+    margin-right: -@grid-gutter-width / 2;
+}
+// 列的公共样式
+.make-grid-gutter(){
+    .col(@index){
+        @seclector: ~'.col-xs-@{index},.col-sm-@{index},.col-md-@{index},.col-lg-@{index}';
+        .col(@index + 1, @seclector);
+    }
+    .col(@index, @list) when(@index <= @grid-gutter-count){
+        @seclector: ~'@{list}, .col-xs-@{index},.col-sm-@{index},.col-md-@{index},.col-lg-@{index}';
+        .col(@index + 1, @seclector);
+    }
+    .col(@index, @list) when(@index > @grid-gutter-count){
+        @{list}{
+            position: relative;
+            float: left;
+            padding-left: @grid-gutter-width / 2;
+            padding-right: @grid-gutter-width / 2;
+            min-width: 1px;
+        }
+    }
+    .col(1);
+}
+.make-grid-gutter();
+.make-grid-width(@type){
+    .col(@index) when (@index <= @grid-gutter-count) {
+        @selector: ~'.col-@{type}-@{index}';
+        @{selector}{
+            @width: @index / @grid-gutter-count * 100;
+            width: ~'@{width}%';
+        }
+        .col(@index + 1);
+    }
+    .col(1);
+}
+
+.make-grid-offset(@type){
+    .col(@index) when (@index <= @grid-gutter-count) {
+        @selector: ~'.col-@{type}-offset-@{index}';
+        @{selector}{
+            @width: @index / @grid-gutter-count * 100;
+            margin-left: ~'@{width}%';
+        }
+        .col(@index + 1);
+    }
+    .col(1);
+}
+// 超小屏幕
+.make-grid-width(xs);
+.make-grid-offset(xs);
+// 小屏
+@media (min-width: @screen-sm){
+    .make-grid-width(sm);
+    .make-grid-offset(sm);
+}
+// 中屏
+@media (min-width: @screen-md){
+    .make-grid-width(md);
+    .make-grid-offset(md);
+}
+
+// 大屏
+@media (min-width: @screen-lg){
+    .make-grid-width(lg);
+    .make-grid-offset(lg);
+}

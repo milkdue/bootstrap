@@ -1,0 +1,49 @@
+// 变量 @变量名:值;
+// 变量选择器
+@pull: 100%;
+@zero: 0px;
+@navegate: navegate;
+.backgroundColor(){
+    background-color: #bfa;
+}
+.background(@height: 50px, @color: skyblue){
+    height: @height;
+    background-color: @color;
+}
+.center(){
+    margin: 0 auto;
+}
+.@{navegate}{
+    width: @pull;
+    height: 50px;
+    .backgroundColor();
+    @media (max-width: 992px) and (min-width: 1200px){
+        background-color: yellow;
+    }
+    @media (min-width: 1200px){
+        background-color: green;
+    }
+}   
+.gad-30{
+    height: 30px;
+}
+.container{
+    width: 84%;
+    .center();
+    .alert{
+        .background();
+    }
+    .boot{
+        .background(@height: 200px, @color:#a1a)
+    }
+    .row{
+        margin: 0 -15px;
+        .item{
+            width: 25%;
+            float: left;
+            padding-left: 15px;
+            padding-right: 15px;
+            box-sizing: border-box;
+        }
+    }
+}
